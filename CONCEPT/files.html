@@ -1,0 +1,181 @@
+<html>
+
+<head>
+    <!-- meterealize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 폰트 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- 구글 아이콘 -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- 부모 태그를 relative, 자식 태그를 absolute로 두면 -->
+    <!-- 부모 태그 안에서 absolute가 된다! -->
+    <!-- https://ironsky.tistory.com/46 -->
+
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            text-align: center;
+        }
+
+        #logo {
+            margin: 0 auto;
+            /* border: 1px solid black; */
+            width: 600px;
+            height: 260px;
+            position: relative;
+        }
+
+
+        #logo-pdf {
+            position: absolute;
+            top: 80px;
+            left: 50px;
+            height: 10em;
+            transform: rotate(-20deg);
+        }
+
+        #logo-video {
+            position: absolute;
+            top: 30px;
+            left: 110px;
+
+            height: 10em;
+            transform: rotate(-10deg);
+        }
+
+        #logo-zip {
+            position: absolute;
+            top: 10px;
+            left: 150px;
+
+            height: 10em;
+            transform: rotate(5deg);
+        }
+
+        #logo-arrow {
+            position: absolute;
+            top: 110px;
+            left: 200px;
+
+            height: 10em;
+            transform: rotate(135deg) scaleX(-1);
+        }
+
+        #logo-text {
+            position: absolute;
+            top: 105px;
+            left: 190px;
+            font-size: 35px;
+            transform: rotate(17deg);
+            text-shadow: 0px 3px 5px #00000055;
+            color: #1144FF;
+            font-weight: 900;
+            text-decoration: underline;
+        }
+
+        #file-list {
+            margin: 0 auto;
+            width: 500px;
+            text-align: left;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <br><br>
+
+    <div id='logo'>
+        <img id="logo-pdf" src="./source/pdf.png">
+        <img id="logo-video" src="./source/video.png">
+        <img id="logo-zip" src="./source/zip.png">
+        <img id="logo-arrow" src="./source/arrow.png">
+        <div id="logo-text">https://file.io/myfile2</div>
+    </div>
+
+    <font style="font-weight: 600; font-size: 30px;">나만의 링크로 파일 공유하기</font><br>
+    <br>
+    <br>
+
+
+    <h4>파일 주소 만들기</h4>
+
+    <div class="row">
+        <div class="col s12">
+            <font style="font-size: 15px;">https://share.io/</font>
+
+            <div class="input-field inline">
+                <input id="email_inline" type="email" class="validate">
+                <label for="email_inline">Email</label>
+                <span class="helper-text" data-error="이미 존재하는 주소입니다" data-success="share.io/myfile02 로 공유됩니다!">Helper
+                    text</span>
+            </div>
+        </div>
+    </div>
+
+
+    <h4>파일 올리기</h4>
+
+    <ul id="file-list" class="collapsible">
+        <li>
+            <div class="collapsible-header">
+                meme04.img
+                <a class="waves-effect waves-light btn red"
+                    style="right: -310px; border-radius: 100px; height: 25px;"><i
+                        class="material-icons">delete_forever</i></a>
+                <div class="collapsible-body">
+                    <p>파일 용량 등의 정보</p>
+                </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                furious coding.mp4
+                <a class="waves-effect waves-light btn red"
+                    style="right: -270px; border-radius: 100px; height: 25px;"><i
+                        class="material-icons">delete_forever</i></a>
+                <div class="collapsible-body">
+                    <p>파일 용량 등의 정보</p>
+                </div>
+                <div class="collapsible-body">
+                    <p>파일 용량 등의 정보</p>
+                </div>
+        </li>
+    </ul>
+
+    <br>
+
+    <a class="btn-floating btn-large waves-effect waves-light green"><i class="material-icons">add</i></a>
+
+    <br><br>
+
+    <h4>비밀번호 설정</h4>
+    <div class="switch">
+        <label>
+            <input type="checkbox">
+            <span class="lever"></span>
+        </label>
+    </div>
+
+    <!-- on 활성화시, 프리미엄 가입 혜택 소개 후 yes, no 선택! -->
+
+    <br><br><br><br>
+    <a class="waves-effect waves-light btn-large blue"><i class="material-icons left" style="font-size: 30px;">insert_link</i>링크 만들기</a>
+
+
+    <br><br><br><br><br><br>
+
+</body>
+
+</html>
